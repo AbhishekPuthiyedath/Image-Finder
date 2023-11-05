@@ -24,7 +24,7 @@
   
   body {
     min-height: 100vh;
-    background: #fff;
+    background:#767c81;
     font-family: var(--font);
     padding: 0 1rem;
   }
@@ -95,9 +95,31 @@ button a {
     width: 300px;
     height: 200px;
     padding: 10px;
+    border-radius: 20px;
   }
   #image-display{
     padding-top: 40px;
     width:100%;
     text-align: center;
+  }
+  #moreButton{
+    background: var(--red);
+    border: none;
+    border-radius:1rem;
+    font-weight: 500;
+    font-size: 2.4rem;
+    height: 4rem;
+    width: 12rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+    display: none;
+    color: #fbfbfb;
+    font-size:15px ;
+  }
+  #moreButton:hover{
+    background-color: #a30916;
+  }
+  .moreButton-align{
+    padding-left: 690px;
   }
