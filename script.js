@@ -11,11 +11,11 @@ async function imageSearch()
     const url=`https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${access_key}`;
     const response= await fetch(url);
     const data=await response.json();
-    console.log(data);
     const results=data.results;
      results.map((result)=>{
         const image=document.createElement("img");
         image.src=result.urls.small;
+        image.classList.add("img-container");
         const imglink=document.createElement("a");
         imglink.href=result.links.html;
         imglink.target="_blank"

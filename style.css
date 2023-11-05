@@ -91,5 +91,13 @@ button a {
  .search-local button:hover {
      background-color: #a30916;
   } 
-  
-  
+  .img-container{
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+  }
+  #image-display{
+    padding-top: 40px;
+    width:100%;
+    text-align: center;
+  }
