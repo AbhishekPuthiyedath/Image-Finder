@@ -30,10 +30,17 @@
     text-align: center;
     height: 100vh;
   }
+  h1{
+    font-size: 40px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-top: 200px;
+    color: #0b0b0b;
+    opacity: .6;
+  }
   /* SEARCH BAR CONTAINER */
   .searchbar-arr{
     padding-left: 38em;
-    padding-top: 15em;
+    padding-top: 10em;
   }
   .search-local {
     width: 100%;
