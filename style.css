@@ -5,7 +5,7 @@
 }
 :root {
     --font: "Inter", sans-serif;
-    --red: #da2535;
+    --red: #353333;
     --black: #292929;
     --white: #fbfbfb;
   }
@@ -27,6 +27,8 @@
     background:#767c81;
     font-family: var(--font);
     padding: 0 1rem;
+    text-align: center;
+    height: 100vh;
   }
   /* SEARCH BAR CONTAINER */
   .searchbar-arr{
@@ -89,7 +91,7 @@ button a {
   }
   
  .search-local button:hover {
-     background-color: #a30916;
+     background-color: #151414;
   } 
   .img-container{
     width: 300px;
@@ -118,8 +120,13 @@ button a {
     font-size:15px ;
   }
   #moreButton:hover{
-    background-color: #a30916;
+    background-color: #131213;
   }
   .moreButton-align{
     padding-left: 690px;
+    padding-bottom: 50px;
+    padding-top: 30px;
+  }
+  ::-webkit-scrollbar {
+    display: none;
   }
