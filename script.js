@@ -1,9 +1,21 @@
-const textfieldKey=document.getElementById("input_key");
+// const textfieldKey=document.getElementById("input_key");
+// Save input value to local storage when input changes
+const textfieldKey = document.getElementById('input_key');
+textfieldKey.addEventListener('input', () => {
+  localStorage.setItem('inputValue', textfieldKey.value);
+});
+
+// Retrieve and set the input value on page load
+const savedValue = localStorage.getItem('inputValue');
+if (savedValue) {
+    textfieldKey.value = savedValue;
+}
+
 const imgSearch=document.getElementById("search-button");
 const imgDisplay=document.getElementById("image-display");
 const moreButton=document.getElementById("moreButton")
 access_key="uUFdZXkvrQDFak4-chDYhBhIdCEPVQhr_oG-509I3Kc";
-
+//////////////////
 let page=1;
 let keyword="";
 async function imageSearch()
@@ -13,6 +25,11 @@ async function imageSearch()
     const response= await fetch(url);
     const data=await response.json();
     localStorage.setItem("localData",JSON.stringify(data));
+    displayImg();
+}
+////////////////
+function displayImg()
+{
     if(page===1)
     {
         document.getElementById("image-display").innerHTML="";
@@ -31,6 +48,7 @@ async function imageSearch()
         moreButton.style.display="block";
      })
 }
+/////////////////
     imgSearch.addEventListener("click",(e)=>{
         e.preventDefault();
         page=1;
@@ -38,29 +56,14 @@ async function imageSearch()
     })
     moreButton.addEventListener("click",()=>{
         page++;
-        console.log(page);
         imageSearch();
     })
-//
+//////////////////
 window.addEventListener('load', function () {
     const localData = JSON.parse(localStorage.getItem("localData"));
+    
     if (localData) {
-        if(page===1)
-        {
-            document.getElementById("image-display").innerHTML="";
-        }
-        let localData = JSON.parse(localStorage.getItem("localData"));
-        const results=localData.results;
-         results.map((result)=>{
-            const image=document.createElement("img");
-            image.src=result.urls.small;
-            image.classList.add("img-container");
-            const imglink=document.createElement("a");
-            imglink.href=result.links.html;
-            imglink.target="_blank"
-            imglink.appendChild(image);
-            imgDisplay.appendChild(imglink);
-            moreButton.style.display="block";
-         })
+        displayImg();
+        
     }
 });
