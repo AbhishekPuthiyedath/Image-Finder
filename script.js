@@ -58,6 +58,7 @@ function displayImg()
         document.getElementById("no-image-display").innerHTML = "No Related Images Found!";
         document.getElementById("no-image-display").style.paddingTop="100px";
         document.getElementById("moreButton").style.display = "none";
+        
     }
 }
 /////////////////
@@ -79,3 +80,9 @@ window.addEventListener('load', function () {
         
     }
 });
+window.onload = function() {
+    var elementToClear = document.getElementById("no-image-display");
+
+    // Clear the content by setting innerHTML or textContent to an empty string
+    elementToClear.innerHTML = ""; // OR elementToClear.textContent = "";
+};
