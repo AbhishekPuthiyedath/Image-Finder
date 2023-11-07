@@ -154,6 +154,21 @@
 .search-button:hover{
   background-color: #0b0b0b;
 }
-
+.img-container{
+  width: 170px;
+  height: 130px;
+  padding: 5px;
+  border-radius: 10px;
+}
+h1{
+  font-size: 35px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding-top: 200px;
+  color: #0b0b0b;
+  opacity: .6;
+}
     
   }
+
+
+  
