@@ -36,7 +36,12 @@ function displayImg()
     }
     let localData = JSON.parse(localStorage.getItem("localData"));
     const results=localData.results;
+    if(results&&results.length>0)
+     {   
+        document.getElementById("no-image-display").innerHTML ="";
+        document.getElementById("no-image-display").style.paddingTop="0px";
      results.map((result)=>{
+        console.log(result.id);
         const image=document.createElement("img");
         image.src=result.urls.small;
         image.classList.add("img-container");
@@ -45,8 +50,15 @@ function displayImg()
         imglink.target="_blank"
         imglink.appendChild(image);
         imgDisplay.appendChild(imglink);
-        moreButton.style.display="block";
      })
+     document.getElementById("moreButton").style.display = "block";
+    }
+    else
+    {
+        document.getElementById("no-image-display").innerHTML = "No Related Images Found!";
+        document.getElementById("no-image-display").style.paddingTop="100px";
+        document.getElementById("moreButton").style.display = "none";
+    }
 }
 /////////////////
     imgSearch.addEventListener("click",(e)=>{

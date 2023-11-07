@@ -55,6 +55,11 @@
     width:100%;
     text-align: center;
   }
+  #no-image-display{
+    font-size: 25px;
+    color: rgb(149, 15, 15);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
   #moreButton{
     background: var(--colorbutton);
     border: none;
@@ -117,6 +122,10 @@
 }
 .search-button:hover{
   background-color: #0b0b0b;
+}
+.no-image-display{
+  font-size: 30px;
+  color:red;
 }
 
 
